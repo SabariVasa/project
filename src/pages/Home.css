@@ -1,0 +1,345 @@
+
+/* .slider container to hold images */
+.slider {
+    margin-top: 100px;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden; /* Hide images outside the container */
+    position: relative;
+  }
+  
+  /* Each image in the slider */
+  .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start off-screen to the right */
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  /* Animation to move images from right to left */
+  @keyframes slideIn {
+    from {
+      left: 100%; /* Start off-screen to the right */
+    }
+    to {
+      left: 0; /* Slide to the center */
+    }
+  }
+  
+  /* Optionally, if you want to add an automatic loop (like infinite slide) */
+  @keyframes slideLoop {
+    0% {
+      left: 0; /* Image starts at the center */
+    }
+    50% {
+      left: -100%; /* Slide off-screen to the left */
+    }
+    100% {
+      left: 0; /* Image returns to the center */
+    }
+  }
+
+
+  /* Image Gallery Section */
+.image-gallery {
+    margin-top: 50px;
+    display: flex; /* Align items horizontally */
+    justify-content: space-between; /* Space the images evenly */
+    padding: 50px; /* Add some padding above and below */
+    gap: 40px; /* Add a gap between the images */
+    padding-left: 70px;
+  }
+  
+  .image-item {
+    flex: 1; /* Each image takes equal space */
+    border-radius: 5px;
+    overflow: hidden; /* Hide overflowed parts of the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .image-item img {
+    width: 100%; /* Make the image take up the entire space of its container */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+  }
+  
+  /* Optional: Hover effect
+  .image-item:hover {
+    transform: scale(1.05); /* Slight zoom-in effect when hovering 
+  } */
+
+  .paragraph-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  
+  .paragraph-section p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .view-gallery-btn {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .view-gallery-btn:hover {
+    background-color: #e65b50;
+  }
+  
+
+  /* Video and Paragraph Section - 50% Width Each */
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.video-container {
+  width: 50%;
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+  width: 50%;
+  padding: 20px;
+}
+
+.text-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video-container,
+  .text-container {
+    width: 100%;
+  }
+}
+
+.text-container .watch{
+  background-color: #ff6f61;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.text-container .watch:hover{
+  background-color: #e65b50;
+}
+
+.awards-text{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+.awards-text h2{
+  color: rgb(7, 7, 71);
+  padding-left: 50px;
+  font-size: 2rem;
+}
+.awards-section{
+  padding: 40px;
+}
+.awards-text p{
+  font-size: 1rem;
+}
+
+.new-slider {
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+  height: 500px;
+  background-color: #000;
+  padding: 20px 40px; /* 20px top and bottom, 40px left and right */
+  margin: 0 auto; /* Centers the slider horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-slider .slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.prev-button, .next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.prev-button:hover, .next-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.why-studio-a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.left-heading {
+  flex: 1;
+  text-align: left;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.right-text {
+  flex: 2;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+
+.dynamic-content-section {
+  margin: 50px 0;
+  padding: 100px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.dynamic-content h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dynamic-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.other-services {
+  margin: 50px 0;
+  padding: 20px;
+  background-color:transparent;
+  border-radius: 10px;
+}
+
+.other-services h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #0056b3;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.card button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+
+

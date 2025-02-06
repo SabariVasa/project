@@ -1,0 +1,48 @@
+/* Footer.css */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  footer .footer-left {
+    font-size: 14px;
+  }
+  
+  footer .footer-right {
+    display: flex;
+    padding-right: 30px;
+    gap: 20px;
+  }
+  
+  footer .footer-right a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  footer .footer-right a:hover {
+    color: #121ebd;
+  }
+  
+  footer .scroll-to-top {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #278bb3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  footer .scroll-to-top:hover {
+    background-color: #284dc9;
+  }
+  

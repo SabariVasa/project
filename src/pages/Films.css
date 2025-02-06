@@ -1,0 +1,40 @@
+.films-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 videos per row */
+    gap: 20px; /* Space between videos */
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .film-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .film-item video {
+    width: 100%;
+    max-width: 320px; /* Adjust the size of videos */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ✅ Responsive Design */
+  @media (max-width: 1024px) {
+    .films-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 videos per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .films-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 video per row on small screens */
+    }
+  }
+  
